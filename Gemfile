@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'pry'
   gem 'launchy'

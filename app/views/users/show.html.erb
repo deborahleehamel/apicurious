@@ -22,6 +22,17 @@
           <p>following</p>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Organizations</h3>
+          <%= @service.orgs.count %>
+             <% @orgs.each do |org| %>
+            <%=org.login%>
+            <% end %>
+        </div>
+      </div>
+
       <% end %>
     </div>
 

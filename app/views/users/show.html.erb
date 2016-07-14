@@ -63,8 +63,10 @@
             <h1>People I Follow</h1>
             <p>
               <% @followers.each do |follower| %>
+                <div class="col-md-3">
               <h4><%= link_to follower.login, follower.html_url %></h4>
                 <img src="<%= follower.avatar_url %>" height="50px">
+              </div>
               <% end %>
             </p>
         </div>
@@ -72,7 +74,6 @@
             <h1>Activity of People I Follow</h1>
             <p>pushes/commits</p>
         </div>
-
     </div>
 </div>
 

@@ -23,9 +23,9 @@ class GithubService
     get("/user/repos")
   end
 
-  def orgs
-    get("/users/#{current_user.username}/orgs")
-  end
+  # def orgs
+  #   get("/users/#{current_user.username}/orgs")
+  # end
 
   def get(path)
     JSON.parse(connection.get(path).body)

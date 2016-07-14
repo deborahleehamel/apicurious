@@ -21,4 +21,8 @@ class GithubProfile < OpenStruct
     service(current_user).following.map { |github_profile| GithubProfile.new(github_profile)}
   end
 
+  def self.repos(current_user)
+    service(current_user).repos.map { |github_profile| GithubProfile.new(github_profile)}
+  end
+
 end

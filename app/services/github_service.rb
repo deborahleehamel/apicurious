@@ -19,6 +19,10 @@ class GithubService
     get("/user/following")
   end
 
+  def repos
+    get("/user/repos")
+  end
+
   def get(path)
     JSON.parse(connection.get(path).body)
   end

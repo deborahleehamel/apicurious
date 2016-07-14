@@ -10,7 +10,11 @@ class GithubService
   def followers
     get("/users/#{current_user.username}/followers")
   end
-  #
+
+  def starred
+    get("/user/starred")
+  end
+  
   def get(path)
     JSON.parse(connection.get(path).body)
   end

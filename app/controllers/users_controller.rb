@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     # @current_user = current_user
     # @github_profile = GithubProfile.new(current_user)
     @followers = GithubProfile.followers(current_user)
+    @starred = GithubProfile.starred(current_user)
   #  end
   end
 end

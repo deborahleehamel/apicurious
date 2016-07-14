@@ -14,7 +14,11 @@ class GithubService
   def starred
     get("/user/starred")
   end
-  
+
+  def following
+    get("/user/following")
+  end
+
   def get(path)
     JSON.parse(connection.get(path).body)
   end

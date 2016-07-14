@@ -16,5 +16,9 @@ class GithubProfile < OpenStruct
   def self.starred(current_user)
     service(current_user).starred.map { |github_profile| GithubProfile.new(github_profile)}
   end
-  
+
+  def self.following(current_user)
+    service(current_user).following.map { |github_profile| GithubProfile.new(github_profile)}
+  end
+
 end
